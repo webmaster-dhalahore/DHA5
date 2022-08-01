@@ -1,0 +1,36 @@
+-- Create directory 
+create or replace directory MEMBERPICS
+  as 'D:\_DHA\NEW_ERP\v1\Membership\l1\storage\app\public\images\memberpics';
+
+
+create or replace procedure member_img_upload(imgname varchar2, msr number) is 
+ab blob; 
+abfile bfile := bfilename('MEMBERPICS', imgname) ; 
+begin 
+	update
+	    memberinfo
+	set
+	    memberpic = empty_blob()
+	where
+	    membersr = msr returning memberpic into ab;
+	dbms_lob.fileopen(abfile);
+	dbms_lob.loadfromfile(ab,abfile,dbms_lob.getlength(abfile));
+	dbms_lob.fileclose(abfile);
+	commit;
+end member_img_upload;
+
+create or replace procedure member_sign_upload(imgname varchar2, id number) is 
+ab blob; 
+abfile bfile := bfilename('MEMBERPICS', imgname); 
+begin 
+	update
+	    memberinfo
+	set
+	    membersign = empty_blob()
+	where
+	    membersr = id returning membersign into ab;
+	dbms_lob.fileopen(abfile);
+	dbms_lob.loadfromfile(ab,abfile,dbms_lob.getlength(abfile));
+	dbms_lob.fileclose(abfile);
+	commit;
+end member_sign_upload; 

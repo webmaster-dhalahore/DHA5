@@ -1,0 +1,33 @@
+composer update
+composer dump-autoload
+
+php artisan config:cache
+php artisan cache:clear
+php artisan storage:link // to crate a link
+
+// Down the site for maintaince 
+php artisan down --secret="nelson-uk"
+
+up the site after maintaince is done
+php artisan up
+
+
+GENERATE SQL FROM MIGRATION
+php artisan migrate --pretend --no-ansi > migrate.sql
+git log --abbrev-commit
+
+
+tnsnames.ora oranet location
+C:\orant\NET80\ADMIN\tnsnames.ora 
+
+@can will not work with multi guards
+
+You can use this :
+
+@if(auth('guard-name')->check() && auth('guard-name')->user()->can('permission-name'))
+after that run :
+
+php artisan cache:forget spatie.permission.cache
+then :
+
+php artisan cache:clear

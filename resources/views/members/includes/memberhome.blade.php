@@ -1,0 +1,1 @@
+  <a href="{{ route('member.index') }}" class="btn btn-sm btn-primary"><i class="fas fa-address-card mr-1"></i> <i class="fas fa-angle-double-left mr-1"></i> Members List</a>

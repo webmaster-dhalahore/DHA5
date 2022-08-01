@@ -1,0 +1,1 @@
+<button type="button" class="btn btn-sm btn-primary float-right" id="download-pdf"><i class="fas fa-download mr-1"></i> Download</button>

@@ -1,0 +1,32 @@
+PROCEDURES
+create member_img_upload procedure
+create member_sign_upload procedure
+
+create directory
+set path to -- Create directory 
+create or replace directory MEMBERPICS
+  as 'D:\_DHA\NEW_ERP\v1\Membership\l1\storage\app\public\images\memberpics';
+
+
+php artisan serve --host 0.0.0.0 --port 8000
+Laravel log viewer
+https://github.com/ARCANEDEV/LogViewer
+https://www.youtube.com/watch?v=1g0Q3BtxYKQ&
+
+https://github.com/rap2hpoutre/laravel-log-viewer
+https://www.youtube.com/watch?v=Iy73YNomnkw
+
+
+LINUX COPY FOLDER and its contents to another folder
+https://askubuntu.com/questions/86822/how-can-i-copy-the-contents-of-a-folder-to-another-folder-in-a-different-directo
+cp -a /source/. /dest/
+
+
+
+https://youtu.be/kHkQnuYzwoo
+goto github -> settings -> Developer settings -> Personal access tokens
+generate a token
+git config --global user.name "sh4rif"
+git config --global user.email "sh4rif@hotmail.co.uk"
+git config --global credential.helper cache             # set cache so dont have to enter username and toeken everytime
+git config --global unset credential.helper             # delete the cached credentials

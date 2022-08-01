@@ -1,0 +1,1 @@
+<a href="{{ route('home') }}" class="btn btn-sm btn-secondary"><i class="fas fa-home mr-2"></i> Home</a>

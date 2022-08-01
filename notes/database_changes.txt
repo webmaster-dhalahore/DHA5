@@ -1,0 +1,27 @@
+created table clubs
+
+memberinfo table
+add club_id column as foreign key to club table
+add rank column as foreign key to club table
+add picture column as varchar2(100)
+add signature column as varchar2(100)
+add CREATED_AT column as TIMESTAMP
+add UPDATED_AT column as TIMESTAMP
+add CREATED_BY column as number(8)
+add UPDATED_BY column as number(8)
+add mobileno2 column as varchar2(100)
+change phoneresidence length from 20 to 60
+change PHONEOFFICE length from 20 to 60
+addded j club id to club_id column in memberinfo
+
+memberfamily table
+add picture column as varchar2(100)
+add signature column as varchar2(100)
+add CREATED_AT column as TIMESTAMP
+add UPDATED_AT column as TIMESTAMP
+add DELETED_AT column as TIMESTAMP
+add CREATED_BY column as number(8)
+add UPDATED_BY column as number(8)
+add DELETED_BY column as number(8)
+add MEMBERSHIP_FORM column as date
+
